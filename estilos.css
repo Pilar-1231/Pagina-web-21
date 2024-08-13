@@ -1,0 +1,505 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+header {
+    background-color: #fff9f9;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 30px;
+    inline-size: auto;
+}
+
+nav ul li a {
+    color: rgb(10, 10, 10);
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+/* Hero section */
+.hero {
+    background-image: url('https://media.giphy.com/media/mNaQV9zXHJVStOG7MS/giphy.gif');
+    color: white;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 6s infinite ease-in-out;
+    z-index: 1;
+}
+@keyframes float {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(50px) translateY(50px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+.hero h1, .hero .coordinates {
+    position: relative;
+    z-index: 2;
+}
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+    animation: fadeInDown 1s ease-out;
+    transition: transform 0.3s, color 0.3s;
+}
+.hero h1:hover {
+    transform: scale(1.1);
+    color: #cc3712;
+}
+
+.hero .emoji {
+    font-size: 1.5em;
+}
+
+.coordinates {
+    font-size: 2em;
+    margin-top: 20px;
+    animation: fadeInUp 1.5s ease-out;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.categoria {
+    width: 380px;
+    height: 200px;
+    text-align: center;
+    color: #f5f4f4;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categoria:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Fondo específico para cada categoría */
+#categoria-hombre {
+    background-image: url('img/New balancehportada.jpg.jpeg');
+}
+
+#categoria-mujer {
+    background-image: url('img/newbalancemujer.jpg.jpeg');
+}
+
+/* Estilo del texto dentro de las categorías */
+.categoria h2 {
+    background: rgba(99, 6, 6, 0.6);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 0;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+}
+
+footer .contenedor-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+footer .contenedor-footer section {
+    flex: 1;
+    padding: 10px;
+    min-width: 300px;
+}
+
+footer .contenedor-footer h2 {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+footer .contenedor-footer a {
+    color: #fff;
+}
+
+footer .contenedor-footer a:hover {
+    text-decoration: underline;
+}
+
+.redes-sociales a {
+    display: block;
+    margin: 3px 0;
+}
+
+/* Estilo para las fotos en las categorías */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.producto img {
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #010913;
+}
+.btn-add {
+    background-color: #0e0102;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+}
+
+/* Estilo del carrito de compras */
+#carrito {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    width: 300px;
+    display: none;
+    position: absolute; /* Asegúrate de que esté posicionado correctamente */
+    right: 20px; /* Ajusta según tu diseño */
+    top: 70px; /* Ajusta según tu diseño */
+}
+
+#carrito.visible {
+    display: block;
+}
+
+#carrito h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+#carrito-icono {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icono-carrito img {
+    width: 50px;
+    height: 40px;
+    margin-left: 30px;
+    inline-size: auto;
+    
+}
+
+#contador-carrito {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#lista-carrito li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    margin-left: 30px;
+}
+
+#lista-carrito li:last-child {
+    border-bottom: none;
+}
+
+#carrito button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#whatsapp {
+    background-color: #25D366;
+}
+
+#whatsapp:hover {
+    background-color: #128C7E;
+}
+
+/* Detalle del producto en detalle-producto.html */
+.producto-detalle {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.producto-detalle img {
+    max-width: 20%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.producto-detalle h2 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.producto-detalle p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.option-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.option-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#detalle-color, #detalle-talla, #detalle-cantidad {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+#btn-agregar {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+#btn-agregar:hover {
+    background-color: #555;
+}
+
+.color-option {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    border: 2px solid transparent;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+}
+.color-option.selected {
+    border-color: #333;
+}
+
+.descuentos {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.descuentos-carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.descuentos-carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    
+}
+
+.descuentos-slide {
+    flex: 0 0 auto;
+    width: 300px; /* Ajusta este valor según el tamaño de tus imágenes */
+    margin-right: 10px;
+}
+
+.descuentos-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+.image-container {
+    width: 500px; /* Ancho del contenedor */
+    height: 500px; /* Alto del contenedor */
+    border: none; /* Opcional: borde alrededor del contenedor */
+    display: flex; /* Flexbox para alinear la imagen */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    background-color: #f0f0f0; /* Color de fondo del contenedor */
+    overflow: hidden; /* Oculta el exceso de la imagen si es más grande que el contenedor */
+}
+
+.image-container img {
+    width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}

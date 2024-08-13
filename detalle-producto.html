@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Asegúrate de enlazar el archivo CSS -->
+</head>
+<body>
+    <header>
+            <h1>IMPORTADOS 21</h1>
+            <div id="carrito-icono" class="icono-carrito">
+                <img src="img/bolsas-de-compra.png" alt="Carrito">
+                <span id="contador-carrito">0</span>
+            </div>
+            <div id="carrito">
+                <h2>Carrito</h2>
+                <ul id="lista-carrito"></ul>
+                <button id="whatsapp">Comprar por WhatsApp</button>
+            </div>
+        </header>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Descuentos.html">Descuentos</a></li>
+                <li><a href="Hombres.html">Hombres</a></li>
+            </ul>
+            <main>
+                <div class="producto-detalle">
+                    <img id="img/legohombrebeige.jpg.jpeg" src="" alt="ADIDAS LEGO">
+                    <h2 id="ADIDAS LEGO"></h2>
+                    <p id="detalle-precio"></p>
+                    <div class="option-group">
+                            <label for="detalle-color">Color</label>
+                            <div id="detalle-color">
+                                <div class="color-option" data-color="Negro" style="background-image: url('img/legonegrohombre.jpg.jpeg');"></div>
+                                <div class="color-option" data-color="Beige" style="background-image: url('img/legohombrebeige.jpg.jpeg');"></div>
+                                <div class="color-option" data-color="Gris" style="background-image: url('img/legogrishombre.jpg.jpeg');"></div>
+                                <!-- Agrega más colores según sea necesario -->
+                            </div>
+                        </div>
+                    <div class="option-group">
+                        <label for="detalle-talla">TALLA</label>
+                        <select id="detalle-talla"></select>
+                    </div>
+                    <div class="option-group">
+                        <label for="detalle-cantidad">Cantidad</label>
+                        <input type="number" id="detalle-cantidad" value="1" min="1">
+                    </div>
+                    <p>Costo Total: <span id="detalle-costo">$0.00</span></p>
+                    <button id="btn-agregar">Agregar al Carrito</button>
+                </div>  
+                
+                
+            </main>
+    <script src="detalle-producto.js"></script>
+</body>
+</html>
